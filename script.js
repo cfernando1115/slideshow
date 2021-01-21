@@ -1,29 +1,4 @@
 const imageContainer=document.querySelector('.images');
-
-//promisify...
-/*const loadImage=function(img){
-    return new Promise(function(resolve, reject){
-        el=document.createElement('img');
-        el.setAttribute('src', img);
-        imageContainer.append(el);
-        wait(2)
-        .then(()=>{
-            resolve(el);
-            reject(new Error('an error occurred.'));
-        })
-    })
-}*/
-
-    
-/*loadImage('../img/img-1.jpg')
-    .then((el)=>{
-        hideImage(el);
-        return wait(2);
-    })
-    .then(()=>loadImage('../img/img-2.jpg'))
-    .then((el)=>hideImage(el))
-    .catch(err=>console.log(err));*/
-
     
 const wait=function(seconds){
     return new Promise(function(resolve){
@@ -36,7 +11,6 @@ const hideImage=function(img){
 }
 
     
-//async/await...
 var loadNPause=async function(img){
     try {
         var imageEl=document.createElement('img');
